@@ -70,7 +70,7 @@ public class Main {
 
                         try {
                             arbre.esborrar(jugadorEliminar);
-                            System.out.println( posicioEliminar + " " + puntuacioEliminar +  " eliminat amb éxit.");
+                            System.out.println( jugadorEliminar.toString() +  " eliminat amb éxit.");
                         } catch (ArbreException e) {
                             System.out.println("Error al eliminar el jugador: " + e.getMessage());
                         }
@@ -198,7 +198,7 @@ public class Main {
         try {
             while (!arbre.finalRecorregut()) {
                 Jugador jugador = arbre.segRecorregut();
-                System.out.println(jugador);
+                System.out.println(jugador.toString());
             }
         } catch (ArbreException e) {
             System.out.println("Error al recorrer l'arbre: " + e.getMessage());

@@ -25,20 +25,6 @@ public class AcbEnll<E extends Comparable<E>> implements Acb<E>, Cloneable {
             }
             return nouNode;
         }
-        private int calcularCardinalitatRecursiu() {
-            int count = 1;
-
-            if (left != null) {
-                count += left.calcularCardinalitatRecursiu();
-            }
-
-            if (right != null) {
-                count += right.calcularCardinalitatRecursiu();
-            }
-
-            return count;
-        }
-
     }
 
     private NodeA<E> arrel;
@@ -175,11 +161,11 @@ public class AcbEnll<E extends Comparable<E>> implements Acb<E>, Cloneable {
 
     @Override
     public Object clone() {
-        AcbEnll<E> nuevoArbol = new AcbEnll<>();
+        AcbEnll<E> nouArbre = new AcbEnll<>();
         if (arrel != null) {
-            nuevoArbol.arrel = (NodeA<E>) arrel.clone();
+            nouArbre.arrel = (NodeA<E>) arrel.clone();
         }
-        return nuevoArbol;
+        return nouArbre;
     }
     public void iniRecorregut(boolean sentitAscendent) {
         cuaRecurregut = new LinkedList<>();
